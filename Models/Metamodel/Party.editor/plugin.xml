@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated party -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="party.presentation.PartyModelWizardID"
+            name="%_UI_PartyModelWizard_label"
+            class="party.presentation.PartyModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/PartyModelFile.gif">
+         <description>%_UI_PartyModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated party -->
+      <editor
+            id="party.presentation.PartyEditorID"
+            name="%_UI_PartyEditor_label"
+            icon="icons/full/obj16/PartyModelFile.gif"
+            extensions="party"
+            class="party.presentation.PartyEditor"
+            contributorClass="party.presentation.PartyActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
