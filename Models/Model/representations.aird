@@ -1,2 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" uid="_Iu_Z8KZCEe2EAvFrd1ID3A" version="14.5.1.202106111100"/>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:party="http://www.example.org/party" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_w7ecoKadEe2Rqu81RYK5eA" selectedViews="_kP_zEKaeEe2Rqu81RYK5eA" version="14.5.1.202106111100">
+    <semanticResources>BasicTestParty.party</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_kP_zEKaeEe2Rqu81RYK5eA">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/TestPartyModel.design/description/TestPartyModel.odesign#//@ownedViewpoints[name='PartyViewpoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_o_g2MKaeEe2Rqu81RYK5eA" name="Main PartyStructure" repPath="#_o_EKQKaeEe2Rqu81RYK5eA" changeId="8365f43d-fc7d-467c-927c-ec06c624ec89">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/TestPartyModel.design/description/TestPartyModel.odesign#//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']"/>
+        <target xmi:type="party:PartyModel" href="BasicTestParty.party#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_o_EKQKaeEe2Rqu81RYK5eA">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_pAo3kKaeEe2Rqu81RYK5eA" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_pAo3kaaeEe2Rqu81RYK5eA" type="Sirius" element="_o_EKQKaeEe2Rqu81RYK5eA" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_7TbScKaeEe2Rqu81RYK5eA" type="2002" element="_7RwegKaeEe2Rqu81RYK5eA">
+          <children xmi:type="notation:Node" xmi:id="_7TiAIKaeEe2Rqu81RYK5eA" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_7TkcYKaeEe2Rqu81RYK5eA" type="7001">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_7TkcYaaeEe2Rqu81RYK5eA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_7TkcYqaeEe2Rqu81RYK5eA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_7TbScaaeEe2Rqu81RYK5eA" fontName="Segoe UI"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7TbScqaeEe2Rqu81RYK5eA" x="15" y="30" width="633" height="303"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_pAo3kqaeEe2Rqu81RYK5eA"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_pA-OwKaeEe2Rqu81RYK5eA" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_pA_c4KaeEe2Rqu81RYK5eA"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_7RwegKaeEe2Rqu81RYK5eA" name="Birthday Hristo">
+      <target xmi:type="party:Party" href="BasicTestParty.party#//@parties.0"/>
+      <semanticElements xmi:type="party:Party" href="BasicTestParty.party#//@parties.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_C51qMKafEe2Rqu81RYK5eA" labelSize="12" borderSize="1" borderSizeComputationExpression="1" backgroundColor="194,239,255">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/TestPartyModel.design/description/TestPartyModel.odesign#//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/TestPartyModel.design/description/TestPartyModel.odesign#//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/TestPartyModel.design/description/TestPartyModel.odesign#//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_o_QXgKaeEe2Rqu81RYK5eA"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/TestPartyModel.design/description/TestPartyModel.odesign#//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer"/>
+    <target xmi:type="party:PartyModel" href="BasicTestParty.party#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

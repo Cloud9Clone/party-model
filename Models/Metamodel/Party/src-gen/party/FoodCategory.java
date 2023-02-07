@@ -27,14 +27,15 @@ public enum FoodCategory implements Enumerator {
 	 * @ordered
 	 */
 	PIZZA(0, "PIZZA", "PIZZA"),
+
 	/**
-	* The '<em><b>MEAT</b></em>' literal object.
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @see #MEAT_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * The '<em><b>MEAT</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #MEAT_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	MEAT(1, "MEAT", "MEAT"),
 
 	/**
@@ -46,14 +47,15 @@ public enum FoodCategory implements Enumerator {
 	 * @ordered
 	 */
 	SALAD(2, "SALAD", "SALAD"),
+
 	/**
-	* The '<em><b>CAKE</b></em>' literal object.
-	* <!-- begin-user-doc -->
-	* <!-- end-user-doc -->
-	* @see #CAKE_VALUE
-	* @generated
-	* @ordered
-	*/
+	 * The '<em><b>CAKE</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #CAKE_VALUE
+	 * @generated
+	 * @ordered
+	 */
 	CAKE(3, "CAKE", "CAKE");
 
 	/**

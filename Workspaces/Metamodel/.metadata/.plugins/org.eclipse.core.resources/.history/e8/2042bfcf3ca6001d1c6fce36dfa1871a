@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/Party/src-gen" creationIcons="false" editDirectory="/Party.edit/src-gen"
+    editorDirectory="/Party.editor/src-gen" modelPluginID="Party" modelName="Party"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>party.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Party" disposableProviderFactory="true" ecorePackage="party.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="party.ecore#//DrinksCategory">
+      <genEnumLiterals ecoreEnumLiteral="party.ecore#//DrinksCategory/JUICE"/>
+      <genEnumLiterals ecoreEnumLiteral="party.ecore#//DrinksCategory/SOFT_DRINKS"/>
+      <genEnumLiterals ecoreEnumLiteral="party.ecore#//DrinksCategory/ALCOHOL_WHISKY"/>
+      <genEnumLiterals ecoreEnumLiteral="party.ecore#//DrinksCategory/ALCOHOL_WINE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="party.ecore#//FoodCategory">
+      <genEnumLiterals ecoreEnumLiteral="party.ecore#//FoodCategory/VEGAN"/>
+      <genEnumLiterals ecoreEnumLiteral="party.ecore#//FoodCategory/MEAT"/>
+      <genEnumLiterals ecoreEnumLiteral="party.ecore#//FoodCategory/HALAL"/>
+      <genEnumLiterals ecoreEnumLiteral="party.ecore#//FoodCategory/VEGETARIAN"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="party.ecore#//SexCategory">
+      <genEnumLiterals ecoreEnumLiteral="party.ecore#//SexCategory/MALE"/>
+      <genEnumLiterals ecoreEnumLiteral="party.ecore#//SexCategory/FEMALE"/>
+    </genEnums>
+    <genClasses ecoreClass="party.ecore#//PartyModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference party.ecore#//PartyModel/parties"/>
+    </genClasses>
+    <genClasses ecoreClass="party.ecore#//Party">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute party.ecore#//Party/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute party.ecore#//Party/totalCosts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference party.ecore#//Party/participants"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference party.ecore#//Party/djs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference party.ecore#//Party/sustenances"/>
+    </genClasses>
+    <genClasses ecoreClass="party.ecore#//Participant">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute party.ecore#//Participant/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute party.ecore#//Participant/age"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute party.ecore#//Participant/totalValueOfConsumption"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference party.ecore#//Participant/consumes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute party.ecore#//Participant/sex"/>
+    </genClasses>
+    <genClasses ecoreClass="party.ecore#//Sustenance">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute party.ecore#//Sustenance/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute party.ecore#//Sustenance/price"/>
+    </genClasses>
+    <genClasses ecoreClass="party.ecore#//Drink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute party.ecore#//Drink/alcoholContent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute party.ecore#//Drink/type"/>
+    </genClasses>
+    <genClasses ecoreClass="party.ecore#//Food">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute party.ecore#//Food/calories"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute party.ecore#//Food/type"/>
+    </genClasses>
+    <genClasses ecoreClass="party.ecore#//DJ">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute party.ecore#//DJ/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute party.ecore#//DJ/honorarium"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
