@@ -22,7 +22,7 @@
             </style>
           </borderedNodeMappings>
           <subNodeMappings name="ParticipantNode" label="Participant Node" semanticCandidatesExpression="aql:self.participants" domainClass="party::Participant">
-            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/TestPartyModel.design/icons/Person_Male.gif">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelAlignment="LEFT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/TestPartyModel.design/icons/Person_Male.gif">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </style>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <party:PartyModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:party="http://www.example.org/party">
   <parties name="Birthday Hristo">
-    <participants name="Ivelin Ivanov" age="24" consumes="//@parties.0/@sustenances.0"/>
-    <participants name="Mona Wicke" age="23" consumes="//@parties.0/@sustenances.2" sex="FEMALE"/>
+    <participants name="Ivelin Ivanov" age="24"/>
+    <participants name="Mona Wicke" age="23" sex="FEMALE"/>
     <djs name="Aligator" honorarium="300.0"/>
     <sustenances xsi:type="party:Drink" name="Jack Daniels" price="18.99" alcoholContent="37.5" type="ALCOHOL_WHISKY"/>
     <sustenances xsi:type="party:Drink" name="Coca Cola" price="3.5" type="SOFT_DRINKS"/>
