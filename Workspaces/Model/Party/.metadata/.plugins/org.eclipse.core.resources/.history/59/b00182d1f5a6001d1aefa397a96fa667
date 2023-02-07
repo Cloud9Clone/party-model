@@ -1,0 +1,82 @@
+package TestPartyModel.design;
+
+import java.util.List;
+import java.util.Random;
+
+import org.eclipse.emf.ecore.EObject;
+
+import party.DJ;
+import party.Drink;
+import party.Participant;
+import party.Party;
+import party.Sustenance;
+
+/**
+ * The services class used by VSM.
+ */
+public class Services {
+    
+    /**
+    * See http://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.sirius.doc%2Fdoc%2Findex.html&cp=24 for documentation on how to write service methods.
+    */
+    public EObject myService(EObject self, String arg) {
+       // TODO Auto-generated code
+      return self;
+    }
+    
+    // ----- Methods for Drink class -----
+    public Double generateRandomDrinkPrice(Drink drink) {
+    	int minValue = 8, maxValue=40;
+        Random theRandom = new Random();
+        double theRandomValue = 0.0;
+        
+        if( Double.valueOf(maxValue - minValue).isInfinite() == false ) {
+        	theRandomValue = minValue + (maxValue - minValue) * theRandom.nextDouble();
+        	theRandomValue = Math.round(theRandomValue * 100.0) / 100.0;
+        }
+        drink.setPrice(theRandomValue);
+        
+        List<EObject> crossReferences = drink.eCrossReferences();
+        for (EObject obj : crossReferences ) {
+        	System.out.println("In the for-loop");
+        	if (obj instanceof Party) {
+        		Party p = (Party) obj;
+        		double totalCosts = calculateTotalCostsOfParty(p);
+        		p.setTotalCosts(totalCosts);
+        	}
+        }
+        
+        return theRandomValue;
+    }
+    
+    // ----- Methods for Participant class -----
+    public Double calculateTotalValueOfConsumption(Participant participant) {
+    	List<Sustenance> consumedSustenance = participant.getConsumes();
+    	double totalValueOfConsumption = 0;
+    	if (consumedSustenance.size() != 0) {
+    		for (Sustenance s : consumedSustenance) {
+        		totalValueOfConsumption += s.getPrice();
+        	}
+    	}
+    	return totalValueOfConsumption;
+    }
+    
+    // ----- Methods for Party class ----- 
+    public Double calculateTotalCostsOfParty(Party party) {
+    	double totalCostsOfParty = 0;
+    	List<Sustenance> purchasedSustenance = party.getSustenances();
+    	if (purchasedSustenance.size() != 0) {
+    		for (Sustenance s : purchasedSustenance) {
+        		totalCostsOfParty += s.getPrice();
+        	}
+    	}
+    	List<DJ> djs = party.getDjs();
+    	if (djs.size() != 0) {
+    		for (DJ dj : djs) {
+        		totalCostsOfParty += dj.getHonorarium();
+        	}
+    	}
+    	party.setTotalCosts(totalCostsOfParty);
+    	return totalCostsOfParty;
+    }
+}

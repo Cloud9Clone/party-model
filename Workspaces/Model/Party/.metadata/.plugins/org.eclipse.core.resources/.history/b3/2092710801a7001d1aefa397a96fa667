@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="TestPartyModel" version="12.0.0.2017041100">
+  <ownedViewpoints name="PartyViewpoint" modelFileExtension="*.party">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="PartyStructure" domainClass="party::PartyModel" enablePopupBars="true">
+      <metamodel href="http://www.example.org/party#/"/>
+      <defaultLayer name="Default">
+        <edgeMappings name="consumes" sourceMapping="//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']/@subNodeMappings[name='ParticipantNode']" targetMapping="//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']/@subNodeMappings[name='DrinkNode'] //@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']/@subNodeMappings[name='FoodNode']" targetFinderExpression="aql:self.consumes">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="PartyContainer" label="Party Container" semanticCandidatesExpression="aql:self.parties" domainClass="party::Party">
+          <borderedNodeMappings name="DJNode" label="DJ Node" semanticCandidatesExpression="aql:self.djs" domainClass="party::DJ">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelExpression="' '" hideLabelByDefault="true" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/TestPartyModel.design/icons/DJ.gif">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <forbiddenSides>WEST</forbiddenSides>
+              <forbiddenSides>NORTH</forbiddenSides>
+            </style>
+          </borderedNodeMappings>
+          <subNodeMappings name="ParticipantNode" label="Participant Node" semanticCandidatesExpression="aql:self.participants" domainClass="party::Participant">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/TestPartyModel.design/icons/Person_Male.gif">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="DrinkNode" label="Drink Node" deletionDescription="//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@toolSections.0/@ownedTools[name='deleteDrink']" semanticCandidatesExpression="aql:self.sustenances" domainClass="party::Drink">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/TestPartyModel.design/icons/Drink.gif">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="FoodNode" label="Food Node" deletionDescription="//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@toolSections.0/@ownedTools[name='deleteFood']" semanticCandidatesExpression="aql:self.sustenances" domainClass="party::Food">
+            <style xsi:type="style:WorkspaceImageDescription" labelSize="12" showIcon="false" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/TestPartyModel.design/icons/Food.gif">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="aql:self.name + ' / ' + self.totalCosts + ' ($)'">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>underline</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Tools">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="createPartyContainer" label="Party Container" precondition="aql:container.oclIsKindOf(party::PartyModel)" containerMappings="//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']" extraMappings="//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']/@borderedNodeMappings[name='DJNode'] //@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']/@subNodeMappings[name='DrinkNode'] //@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']/@subNodeMappings[name='FoodNode'] //@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']/@subNodeMappings[name='ParticipantNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="party::Party" referenceName="parties">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="aql: 'Example Party' "/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createParticipant" label="Participant" nodeMappings="//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']/@subNodeMappings[name='ParticipantNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="party::Participant" referenceName="participants">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New Participant"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createDrink" label="Drink" nodeMappings="//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']/@subNodeMappings[name='DrinkNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="party::Drink" referenceName="sustenances">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New Drink"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="price" valueExpression="service:generateRandomDrinkPrice()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createFood" label="Food" nodeMappings="//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']/@subNodeMappings[name='FoodNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="party::Food" referenceName="sustenances">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New Food"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="price" valueExpression="service:generateRandomFoodPrice()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createDJ" label="DJ" nodeMappings="//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']/@borderedNodeMappings[name='DJNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="party::DJ" referenceName="djs">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="service:generateRandomDJName()"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="honorarium" valueExpression="service:generateRandomHonorarium()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="cosumesSustenance" label="consumes" edgeMappings="//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@edgeMappings[name='consumes']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="consumes" valueExpression="var:target"/>
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="totalValueOfConsumption" valueExpression="service:calculateTotalValueOfConsumption()"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="deleteDrink" label="Drink">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:Unset" featureName="price" elementExpression="service:returnZeroAndCalculateTotalCosts()"/>
+                <subModelOperations xsi:type="tool_1:RemoveElement"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="deleteFood" label="Food">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:Unset" featureName="price" elementExpression="service:returnZeroAndCalculateTotalCosts()"/>
+                <subModelOperations xsi:type="tool_1:RemoveElement"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <customization>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.oclAsType(party::Participant).sex == party::SexCategory::MALE">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']/@subNodeMappings[name='ParticipantNode']/@style" attributeName="workspacePath" value="/TestPartyModel.design/icons/Person_Male.gif"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.oclAsType(party::Participant).sex == party::SexCategory::FEMALE">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']/@subNodeMappings[name='ParticipantNode']/@style" attributeName="workspacePath" value="/TestPartyModel.design/icons/Person_Female.gif"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.oclAsType(party::Drink).type == party::DrinksCategory::JUICE">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']/@subNodeMappings[name='DrinkNode']/@style" attributeName="workspacePath" value="/TestPartyModel.design/icons/Drink_Juice.gif"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.oclAsType(party::Drink).type == party::DrinksCategory::SOFT_DRINKS">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']/@subNodeMappings[name='DrinkNode']/@style" attributeName="workspacePath" value="/TestPartyModel.design/icons/Drink_Soft.gif"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.oclAsType(party::Drink).type == party::DrinksCategory::ALCOHOL_WHISKY">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']/@subNodeMappings[name='DrinkNode']/@style" attributeName="workspacePath" value="/TestPartyModel.design/icons/Drink_Whisky.gif"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.oclAsType(party::Drink).type == party::DrinksCategory::ALCOHOL_WINE">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']/@subNodeMappings[name='DrinkNode']/@style" attributeName="workspacePath" value="/TestPartyModel.design/icons/Drink_Wine.gif"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.oclAsType(party::Food).type == party::FoodCategory::PIZZA">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']/@subNodeMappings[name='FoodNode']/@style" attributeName="workspacePath" value="/TestPartyModel.design/icons/Food_Pizza.gif"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.oclAsType(party::Food).type == party::FoodCategory::MEAT">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']/@subNodeMappings[name='FoodNode']/@style" attributeName="workspacePath" value="/TestPartyModel.design/icons/Food_Meat.gif"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.oclAsType(party::Food).type == party::FoodCategory::SALAD">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']/@subNodeMappings[name='FoodNode']/@style" attributeName="workspacePath" value="/TestPartyModel.design/icons/Food_Salad.gif"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql:self.oclAsType(party::Food).type == party::FoodCategory::CAKE">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']/@subNodeMappings[name='FoodNode']/@style" attributeName="workspacePathk" value="/TestPartyModel.design/icons/Food_Cake.gif"/>
+          </vsmElementCustomizations>
+        </customization>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="TestPartyModel.design.Services"/>
+  </ownedViewpoints>
+</description:Group>

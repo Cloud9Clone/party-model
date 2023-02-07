@@ -8,4 +8,8 @@
     <sustenances xsi:type="party:Drink" name="Coca Cola" price="3.5" type="SOFT_DRINKS"/>
     <sustenances xsi:type="party:Food" name="Pizza Margaritta" price="8.5" calories="2190.4"/>
   </parties>
+  <parties name="Example Party" totalCosts="21.68">
+    <participants name="New Participant" totalValueOfConsumption="51.46" consumes="//@parties.1/@sustenances.0"/>
+    <sustenances xsi:type="party:Food" name="New Food" price="21.68"/>
+  </parties>
 </party:PartyModel>
