@@ -1,9 +1,9 @@
-#Wed Feb 08 06:19:51 EET 2023
+#Wed Feb 08 13:23:02 EET 2023
 print.useInches=true
 rulergrid.rulerunit=0
 print.margin.left=0.5
 rulergrid.gridlinestyle=6
-viewport.y=188
+viewport.y=146
 zoom=1.0
 print.usePortrait=true
 print.page.height=11.0

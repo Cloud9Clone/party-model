@@ -1,0 +1,18 @@
+[comment encoding = UTF-8 /]
+[module generate('http://www.example.org/party')]
+
+[import TestPartyModel::acceleo::module::main::generateBasicInfo/]
+[import TestPartyModel::acceleo::module::main::generateParticipantsStatistics/]
+
+[template public generateElement(aPartyModel : PartyModel)]
+[comment @main/]
+[file ('TestPartyModel'.concat('.txt'), false, 'UTF-8')]
+
+[comment ----- Generate some basic information about all Parties ----- /]
+[generateBasicInformation(aPartyModel)/]
+
+[comment ----- Generate information about all >= 18 males entered the parties ----- /]
+[generateParticipantsStats(aPartyModel)/]
+
+[/file]
+[/template]

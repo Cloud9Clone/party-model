@@ -1,0 +1,63 @@
+[comment encoding = UTF-8 /]
+[module generateBasicInfo('http://www.example.org/party')]
+
+
+[template public generateBasicInformation(aPartyModel : PartyModel)]
+[comment ----- General Information ----- /]
+[let parties: Sequence(Party) = aPartyModel.eContents(Party)]
+
+The current PartyModel has [parties->size()/] Parties: 
+[for (party: Party | parties)]
+	- [party.name/] (Total Costs [party.totalCosts/]$)
+[/for]
+
+[comment ----- List of Participants ----- /]
+List of all attended Participants:
+[for (party: Party | parties)]
+	- [party.name/]:
+	[for (participant: Participant | party.eContents(Participant))]
+		-- [participant.name/]:
+			--- Total Value of Consumption: [participant.totalValueOfConsumption/]
+			--- Age: [participant.age/]
+			--- Sex: [participant.sex/] 
+	[/for]
+[/for]
+
+[comment ----- List of Sustenances ----- /]
+List of all Sustenances (Foods & Drinks):
+[for (party: Party | parties)]
+	- [party.name/]:
+		[let drinks: Sequence(Drink) = party.eContents(Drink)]
+		-- Drinks:
+			[for (drink: Drink | drinks)]
+			--- [drink.name/] ([drink.type/])
+			[/for]
+			[if drinks->size() = 0]
+				No Drinks are presented in this party!
+			[/if]
+		[/let]
+		[let foods: Sequence(Food) = party.eContents(Food)]
+		-- Food:
+			[for (food: Food | foods)]
+			--- [food.name/] ([food.type/])
+			[/for]
+			[if foods->size() = 0]
+				No Food is presented in this party!
+			[/if]
+		[/let]
+[/for]
+
+[comment ----- List of all DJs ----- /]
+List of all DJs and their honorariums:
+[for (party: Party | parties)]
+	- [party.name/]:
+		[let djs: Sequence(DJ) = party.eContents(DJ)]
+		-- DJs:
+			[for (dj: DJ | djs)]
+			--- [dj.name/] | [dj.honorarium/]$
+			[/for]
+		[/let]
+[/for]
+
+[/let]
+[/template]

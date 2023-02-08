@@ -1,0 +1,22 @@
+[comment encoding = UTF-8 /]
+[module generateParticipantsStatistics('http://www.example.org/party')]
+
+
+[template public generateParticipantsStats(aPartyModel : PartyModel)]
+[let parties: Sequence(Party) = aPartyModel.eContents(Party)]
+[comment ----- Only the male participants >= 18 pro Party ----- /]
+[for (party: Party | parties)]
+	[let maleParticipants: Sequence(Participant) = party.eContents(Participant)->select(p | p.eGet('sex') <> 'MALE')]
+	- [party.name/] (Total Male Participants: [maleParticipants->size()/]) :
+	[for (participant: Participant | maleParticipants)]
+		[if participant.age >= 18]
+		-- [participant.name/] ([participant.age/] years)
+		[/if] 
+	[/for]
+	[if not (maleParticipants->forAll(p | p.age >= 18))]
+	   	Every male is below 18 years old!
+	[/if]
+	[/let]
+[/for]
+[/let]
+[/template]

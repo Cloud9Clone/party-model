@@ -1,0 +1,64 @@
+
+
+The current PartyModel has 2 Parties: 
+	- Birthday Hristo (Total Costs 358.57$)
+	- Birthday Mona (Total Costs 518.1$)
+
+List of all attended Participants:
+	- Birthday Hristo:
+		-- Ivelin Ivanov:
+			--- Total Value of Consumption: 22.08
+			--- Age: 24
+			--- Sex: MALE 
+		-- Mona Wicke:
+			--- Total Value of Consumption: 22.69
+			--- Age: 23
+			--- Sex: FEMALE 
+	- Birthday Mona:
+		-- Max Mustermann:
+			--- Total Value of Consumption: 51.46
+			--- Age: 17
+			--- Sex: MALE 
+		-- Laura Kolleni:
+			--- Total Value of Consumption: 8.85
+			--- Age: 16
+			--- Sex: FEMALE 
+		-- Maria Novikova:
+			--- Total Value of Consumption: 13.45
+			--- Age: 20
+			--- Sex: FEMALE 
+
+List of all Sustenances (Foods & Drinks):
+	- Birthday Hristo:
+		-- Drinks:
+			--- Jack Daniels (ALCOHOL_WHISKY)
+			--- Coca Cola (SOFT_DRINKS)
+		-- Food:
+			--- Margaritta Pizza (PIZZA)
+	- Birthday Mona:
+		-- Drinks:
+			--- Apple Juice (JUICE)
+			--- Pepsi (SOFT_DRINKS)
+		-- Food:
+			--- Wiener Schnitzel (MEAT)
+			--- Pizza Margaritta Family (PIZZA)
+
+List of all DJs and their honorariums:
+	- Birthday Hristo:
+		-- DJs:
+			--- Martin Garrix | 313.8$
+	- Birthday Mona:
+		-- DJs:
+			--- Hardwell | 228.15$
+			--- Calvin Harris | 218.08$
+
+
+
+	- Birthday Hristo (Total Male Participants: 2) :
+		-- Ivelin Ivanov (24 years)
+		-- Mona Wicke (23 years)
+	- Birthday Mona (Total Male Participants: 3) :
+		-- Maria Novikova (20 years)
+	   	Every male is below 18 years old!
+
+

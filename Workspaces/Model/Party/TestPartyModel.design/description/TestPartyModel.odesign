@@ -114,7 +114,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="cosumesSustenance" label="consumes" edgeMappings="//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@edgeMappings[name='consumes']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="cosumesSustenance" label="consumes" inverseSelectionOrder="true" edgeMappings="//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@edgeMappings[name='consumes']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -254,7 +254,7 @@
             <audits auditExpression="aql:self.age > 0"/>
           </semanticValidationRules>
           <semanticValidationRules name="mustContainASustenance" level="WARNING" message="Each Patricipant must have a reference to at least one type of Sustenance!" targetClass="party::Participant">
-            <audits auditExpression="aql:self.sustenanceß:size() != 0"/>
+            <audits auditExpression="aql:self.sustenance->size() != 0"/>
           </semanticValidationRules>
         </validationSet>
       </pages>
