@@ -4,7 +4,7 @@
     <semanticResources>BasicTestParty.party</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_kP_zEKaeEe2Rqu81RYK5eA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/TestPartyModel.design/description/TestPartyModel.odesign#//@ownedViewpoints[name='PartyViewpoint']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_o_g2MKaeEe2Rqu81RYK5eA" name="Main PartyStructure" repPath="#_o_EKQKaeEe2Rqu81RYK5eA" changeId="9e1529e3-88a8-4036-897c-fd7c955b8b59">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_o_g2MKaeEe2Rqu81RYK5eA" name="Main PartyStructure" repPath="#_o_EKQKaeEe2Rqu81RYK5eA" changeId="d3ceb50a-53b4-4ec9-bbb7-317baf59f3f2">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/TestPartyModel.design/description/TestPartyModel.odesign#//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']"/>
         <target xmi:type="party:PartyModel" href="BasicTestParty.party#/"/>
       </ownedRepresentationDescriptors>
@@ -113,11 +113,42 @@
               <styles xmi:type="notation:ShapeStyle" xmi:id="_KMVT4acBEe2zUJYPU0J_Mw" fontName="Segoe UI" fontHeight="12"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KMVT4qcBEe2zUJYPU0J_Mw" x="10" y="67" width="48" height="48"/>
             </children>
+            <children xmi:type="notation:Node" xmi:id="_miGn4KcHEe2zUJYPU0J_Mw" type="3007" element="_miBIUKcHEe2zUJYPU0J_Mw">
+              <children xmi:type="notation:Node" xmi:id="_miHO8KcHEe2zUJYPU0J_Mw" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_miHO8acHEe2zUJYPU0J_Mw" x="49" y="10"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_miHO8qcHEe2zUJYPU0J_Mw" type="3005" element="_miBvYKcHEe2zUJYPU0J_Mw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_miHO86cHEe2zUJYPU0J_Mw" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_miHO9KcHEe2zUJYPU0J_Mw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_miGn4acHEe2zUJYPU0J_Mw" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_miGn4qcHEe2zUJYPU0J_Mw" x="205" y="144" width="48" height="48"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_2-FP8ab4Ee2zUJYPU0J_Mw"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_2-FP8qb4Ee2zUJYPU0J_Mw"/>
           </children>
+          <children xmi:type="notation:Node" xmi:id="_nlJZQKcHEe2zUJYPU0J_Mw" type="3012" element="_nlFH0KcHEe2zUJYPU0J_Mw">
+            <children xmi:type="notation:Node" xmi:id="_nlKAUKcHEe2zUJYPU0J_Mw" visible="false" type="5010">
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_nlKAUacHEe2zUJYPU0J_Mw" x="49" y="14"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_nlKAUqcHEe2zUJYPU0J_Mw" type="3005" element="_nlFH0acHEe2zUJYPU0J_Mw">
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_nlKAU6cHEe2zUJYPU0J_Mw" fontName="Segoe UI"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nlKAVKcHEe2zUJYPU0J_Mw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_nlJZQacHEe2zUJYPU0J_Mw" fontName="Segoe UI" fontHeight="12"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nlJZQqcHEe2zUJYPU0J_Mw" x="488" y="73" width="48" height="48"/>
+          </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_2-Eo4ab4Ee2zUJYPU0J_Mw" fontName="Segoe UI" fontHeight="12" underline="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2-Eo4qb4Ee2zUJYPU0J_Mw" x="210" y="375" width="498" height="303"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2-Eo4qb4Ee2zUJYPU0J_Mw" x="180" y="375" width="498" height="303"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_4MlkpKdfEe2zUJYPU0J_Mw" type="2002" element="_4Mh6QKdfEe2zUJYPU0J_Mw">
+          <children xmi:type="notation:Node" xmi:id="_4MmLsKdfEe2zUJYPU0J_Mw" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_4MmLsadfEe2zUJYPU0J_Mw" type="7001">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_4MmLsqdfEe2zUJYPU0J_Mw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_4MmLs6dfEe2zUJYPU0J_Mw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_4MlkpadfEe2zUJYPU0J_Mw" fontName="Segoe UI" fontHeight="12" underline="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4MlkpqdfEe2zUJYPU0J_Mw" x="675" y="315"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_pAo3kqaeEe2Rqu81RYK5eA"/>
         <edges xmi:type="notation:Edge" xmi:id="_s4hHQKbOEe2Rqu81RYK5eA" type="4001" element="_s4bAoKbOEe2Rqu81RYK5eA" source="_Xby14KagEe2Rqu81RYK5eA" target="_Xb5jkKagEe2Rqu81RYK5eA">
@@ -279,9 +310,21 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/TestPartyModel.design/description/TestPartyModel.odesign#//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@edgeMappings[name='consumes']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_29_JUKb4Ee2zUJYPU0J_Mw" name="Example Party / 21.68 ($)">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_29_JUKb4Ee2zUJYPU0J_Mw" name="Example Party / 277.72 ($)">
       <target xmi:type="party:Party" href="BasicTestParty.party#//@parties.1"/>
       <semanticElements xmi:type="party:Party" href="BasicTestParty.party#//@parties.1"/>
+      <ownedBorderedNodes xmi:type="diagram:DNode" uid="_nlFH0KcHEe2zUJYPU0J_Mw" name="' '" width="-1" height="-1" resizeKind="NSEW">
+        <target xmi:type="party:DJ" href="BasicTestParty.party#//@parties.1/@djs.0"/>
+        <semanticElements xmi:type="party:DJ" href="BasicTestParty.party#//@parties.1/@djs.0"/>
+        <graphicalFilters xmi:type="diagram:HideLabelFilter" uid="_nlFu4KcHEe2zUJYPU0J_Mw"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_nlFH0acHEe2zUJYPU0J_Mw" labelSize="12" showIcon="false" hideLabelByDefault="true" workspacePath="/TestPartyModel.design/icons/DJ.gif">
+          <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/TestPartyModel.design/description/TestPartyModel.odesign#//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']/@borderedNodeMappings[name='DJNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TestPartyModel.design/description/TestPartyModel.odesign#//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']/@borderedNodeMappings[name='DJNode']"/>
+      </ownedBorderedNodes>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -297,6 +340,15 @@
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
         <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_GRiSQacBEe2zUJYPU0J_Mw" labelSize="12" showIcon="false" labelAlignment="RIGHT" description="_6fK8QKakEe2Rqu81RYK5eA" workspacePath="/TestPartyModel.design/icons/Food_Pizza.gif"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TestPartyModel.design/description/TestPartyModel.odesign#//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']/@subNodeMappings[name='FoodNode']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_miBIUKcHEe2zUJYPU0J_Mw" name="Pizza Margaritta Family" width="-1" height="-1" resizeKind="NSEW">
+        <target xmi:type="party:Food" href="BasicTestParty.party#//@parties.1/@sustenances.1"/>
+        <semanticElements xmi:type="party:Food" href="BasicTestParty.party#//@parties.1/@sustenances.1"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_miBvYKcHEe2zUJYPU0J_Mw" labelSize="12" showIcon="false" labelAlignment="RIGHT" description="_6fK8QKakEe2Rqu81RYK5eA" workspacePath="/TestPartyModel.design/icons/Food_Pizza.gif"/>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/TestPartyModel.design/description/TestPartyModel.odesign#//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']/@subNodeMappings[name='FoodNode']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNode" uid="_KMP0UKcBEe2zUJYPU0J_Mw" name="New Participant" outgoingEdges="_K1nheKcBEe2zUJYPU0J_Mw" width="-1" height="-1" resizeKind="NSEW">
@@ -316,6 +368,18 @@
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_K1oIgacBEe2zUJYPU0J_Mw" labelSize="12"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/TestPartyModel.design/description/TestPartyModel.odesign#//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@edgeMappings[name='consumes']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_4Mh6QKdfEe2zUJYPU0J_Mw" name="Example Party / 0.0 ($)">
+      <target xmi:type="party:Party" href="BasicTestParty.party#//@parties.2"/>
+      <semanticElements xmi:type="party:Party" href="BasicTestParty.party#//@parties.2"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_4Mh6QadfEe2zUJYPU0J_Mw" labelSize="12" borderSize="1" borderSizeComputationExpression="1" backgroundColor="194,239,255">
+        <labelFormat>underline</labelFormat>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/TestPartyModel.design/description/TestPartyModel.odesign#//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/TestPartyModel.design/description/TestPartyModel.odesign#//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']/@defaultLayer/@containerMappings[name='PartyContainer']"/>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/resource/TestPartyModel.design/description/TestPartyModel.odesign#//@ownedViewpoints[name='PartyViewpoint']/@ownedRepresentations[name='PartyStructure']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_o_QXgKaeEe2Rqu81RYK5eA"/>

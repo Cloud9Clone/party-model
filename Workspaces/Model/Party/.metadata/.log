@@ -10379,3 +10379,442 @@ java.lang.IllegalArgumentException
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+!ENTRY org.eclipse.eef.core 4 0 2023-02-08 02:41:29.664
+!MESSAGE An issue has occurred during the evaluation of 'aql: if self.age > 18 then Yes else No endif'.
+Couldn't find the 'Yes' variable
+
+
+!ENTRY org.eclipse.eef.core 4 0 2023-02-08 02:42:12.499
+!MESSAGE An issue has occurred during the evaluation of 'aql: if (self.age > 18) then (Yes) else (No) endif'.
+Couldn't find the 'Yes' variable
+
+
+!ENTRY org.eclipse.eef.core 4 0 2023-02-08 02:48:43.693
+!MESSAGE An issue has occurred during the evaluation of 'service:calculateTotalCostsOfParty()'.
+Error while evaluating expression
+
+!STACK 0
+org.eclipse.sirius.common.tools.api.interpreter.EvaluationException: Exception while calling service TestPartyModel.design.Services.calculateTotalCostsOfParty(party.Party).
+	at org.eclipse.sirius.common.tools.internal.interpreter.MonomorphicService.fail(MonomorphicService.java:97)
+	at org.eclipse.sirius.common.tools.internal.interpreter.MonomorphicService.call(MonomorphicService.java:91)
+	at org.eclipse.sirius.common.tools.internal.interpreter.PolymorphicService.call(PolymorphicService.java:66)
+	at org.eclipse.sirius.common.tools.internal.interpreter.ServiceInterpreter.callService(ServiceInterpreter.java:164)
+	at org.eclipse.sirius.common.tools.internal.interpreter.ServiceInterpreter.evaluate(ServiceInterpreter.java:156)
+	at org.eclipse.sirius.common.tools.api.interpreter.IInterpreter.evaluateExpression(IInterpreter.java:124)
+	at org.eclipse.sirius.tools.internal.interpreter.SessionInterpreter.evaluateExpression(SessionInterpreter.java:161)
+	at org.eclipse.sirius.properties.core.api.SiriusInterpreter.evaluateExpression(SiriusInterpreter.java:65)
+	at org.eclipse.eef.core.api.utils.EvalFactory$Eval.evaluate(EvalFactory.java:241)
+	at org.eclipse.eef.core.internal.controllers.EEFLabelController.refresh(EEFLabelController.java:79)
+	at org.eclipse.eef.ide.ui.api.widgets.AbstractEEFLifecycleManager.refresh(AbstractEEFLifecycleManager.java:96)
+	at org.eclipse.eef.ide.ui.api.widgets.AbstractEEFWidgetLifecycleManager.refresh(AbstractEEFWidgetLifecycleManager.java:485)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.eclipse.eef.ide.ui.internal.widgets.EEFGroupLifecycleManager.refresh(EEFGroupLifecycleManager.java:350)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.eclipse.eef.ide.ui.internal.widgets.EEFSectionLifecycleManager.refresh(EEFSectionLifecycleManager.java:127)
+	at org.eclipse.eef.ide.ui.api.EEFTab.refresh(EEFTab.java:122)
+	at org.eclipse.eef.ide.ui.properties.api.EEFSection.refresh(EEFSection.java:62)
+	at org.eclipse.eef.properties.ui.api.EEFTabContents$3.run(EEFTabContents.java:162)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.eef.properties.ui.api.EEFTabContents.refresh(EEFTabContents.java:165)
+	at org.eclipse.eef.properties.ui.api.EEFTabbedPropertySheetPage.processSelectionChanged(EEFTabbedPropertySheetPage.java:522)
+	at org.eclipse.eef.properties.ui.api.EEFTabbedPropertySheetPage.access$0(EEFTabbedPropertySheetPage.java:479)
+	at org.eclipse.eef.properties.ui.api.EEFTabbedPropertySheetPage$1.selectionChanged(EEFTabbedPropertySheetPage.java:206)
+	at org.eclipse.eef.properties.ui.internal.page.EEFTabbedPropertyViewer.fireSelectionChanged(EEFTabbedPropertyViewer.java:96)
+	at org.eclipse.eef.properties.ui.internal.page.EEFTabbedPropertyViewer.access$1(EEFTabbedPropertyViewer.java:94)
+	at org.eclipse.eef.properties.ui.internal.page.EEFTabbedPropertyViewer$1.widgetSelected(EEFTabbedPropertyViewer.java:78)
+	at org.eclipse.jface.util.OpenStrategy.fireSelectionEvent(OpenStrategy.java:242)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:400)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4237)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1069)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:773)
+	at org.eclipse.eef.properties.ui.internal.page.propertylist.EEFTabbedPropertyList.select(EEFTabbedPropertyList.java:391)
+	at org.eclipse.eef.properties.ui.internal.page.EEFTabbedPropertyViewer.setSelectedTabDescriptor(EEFTabbedPropertyViewer.java:178)
+	at org.eclipse.eef.properties.ui.api.EEFTabbedPropertySheetPage.doSetInput(EEFTabbedPropertySheetPage.java:321)
+	at org.eclipse.eef.properties.ui.api.EEFTabbedPropertySheetPage.setInput(EEFTabbedPropertySheetPage.java:256)
+	at org.eclipse.eef.properties.ui.api.EEFTabbedPropertySheetPage.selectionChanged(EEFTabbedPropertySheetPage.java:239)
+	at org.eclipse.ui.views.properties.PropertySheet.showSelectionAndDescription(PropertySheet.java:554)
+	at org.eclipse.ui.views.properties.PropertySheet.selectionChanged(PropertySheet.java:534)
+	at org.eclipse.ui.internal.e4.compatibility.SelectionService.notifyListeners(SelectionService.java:266)
+	at org.eclipse.ui.internal.e4.compatibility.SelectionService.handlePostSelectionChanged(SelectionService.java:123)
+	at org.eclipse.ui.internal.e4.compatibility.SelectionService.lambda$2(SelectionService.java:78)
+	at org.eclipse.e4.ui.internal.workbench.SelectionAggregator$3.run(SelectionAggregator.java:163)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.SelectionAggregator.notifyPostListeners(SelectionAggregator.java:160)
+	at org.eclipse.e4.ui.internal.workbench.SelectionAggregator$6.lambda$0(SelectionAggregator.java:250)
+	at org.eclipse.e4.core.contexts.RunAndTrack.runExternalCode(RunAndTrack.java:59)
+	at org.eclipse.e4.ui.internal.workbench.SelectionAggregator$6.changed(SelectionAggregator.java:250)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:105)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.processScheduled(EclipseContext.java:364)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.set(EclipseContext.java:379)
+	at org.eclipse.e4.ui.internal.workbench.SelectionServiceImpl.setPostSelection(SelectionServiceImpl.java:39)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.lambda$2(CompatibilityPart.java:132)
+	at org.eclipse.gmf.runtime.diagram.ui.parts.DiagramGraphicalViewer.flushSelectionEvents(DiagramGraphicalViewer.java:257)
+	at org.eclipse.gmf.runtime.diagram.ui.parts.DiagramGraphicalViewer$1.run(DiagramGraphicalViewer.java:235)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4029)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1041)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+Caused by: java.lang.IllegalStateException: Cannot modify resource set without a write transaction
+	at org.eclipse.emf.transaction.impl.TransactionChangeRecorder.assertWriting(TransactionChangeRecorder.java:349)
+	at org.eclipse.emf.transaction.impl.TransactionChangeRecorder.appendNotification(TransactionChangeRecorder.java:303)
+	at org.eclipse.emf.transaction.impl.TransactionChangeRecorder.processObjectNotification(TransactionChangeRecorder.java:285)
+	at org.eclipse.emf.transaction.impl.TransactionChangeRecorder.notifyChanged(TransactionChangeRecorder.java:241)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at party.impl.PartyImpl.setTotalCosts(PartyImpl.java:173)
+	at TestPartyModel.design.Services.calculateTotalCostsOfParty(Services.java:116)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.sirius.common.tools.internal.interpreter.MonomorphicService.call(MonomorphicService.java:77)
+	... 83 more
+
+!ENTRY org.eclipse.eef.core 4 0 2023-02-08 02:49:02.468
+!MESSAGE An issue has occurred during the evaluation of 'service:calculateTotalCostsOfParty()'.
+Error while evaluating expression
+
+!STACK 0
+org.eclipse.sirius.common.tools.api.interpreter.EvaluationException: Exception while calling service TestPartyModel.design.Services.calculateTotalCostsOfParty(party.Party).
+	at org.eclipse.sirius.common.tools.internal.interpreter.MonomorphicService.fail(MonomorphicService.java:97)
+	at org.eclipse.sirius.common.tools.internal.interpreter.MonomorphicService.call(MonomorphicService.java:91)
+	at org.eclipse.sirius.common.tools.internal.interpreter.PolymorphicService.call(PolymorphicService.java:66)
+	at org.eclipse.sirius.common.tools.internal.interpreter.ServiceInterpreter.callService(ServiceInterpreter.java:164)
+	at org.eclipse.sirius.common.tools.internal.interpreter.ServiceInterpreter.evaluate(ServiceInterpreter.java:156)
+	at org.eclipse.sirius.common.tools.api.interpreter.IInterpreter.evaluateExpression(IInterpreter.java:124)
+	at org.eclipse.sirius.tools.internal.interpreter.SessionInterpreter.evaluateExpression(SessionInterpreter.java:161)
+	at org.eclipse.sirius.properties.core.api.SiriusInterpreter.evaluateExpression(SiriusInterpreter.java:65)
+	at org.eclipse.eef.core.api.utils.EvalFactory$Eval.evaluate(EvalFactory.java:241)
+	at org.eclipse.eef.core.internal.controllers.EEFLabelController.refresh(EEFLabelController.java:79)
+	at org.eclipse.eef.ide.ui.api.widgets.AbstractEEFLifecycleManager.refresh(AbstractEEFLifecycleManager.java:96)
+	at org.eclipse.eef.ide.ui.api.widgets.AbstractEEFWidgetLifecycleManager.refresh(AbstractEEFWidgetLifecycleManager.java:485)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.eclipse.eef.ide.ui.internal.widgets.EEFGroupLifecycleManager.refresh(EEFGroupLifecycleManager.java:350)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.eclipse.eef.ide.ui.internal.widgets.EEFSectionLifecycleManager.refresh(EEFSectionLifecycleManager.java:127)
+	at org.eclipse.eef.ide.ui.api.EEFTab.refresh(EEFTab.java:122)
+	at org.eclipse.eef.ide.ui.properties.api.EEFSection.refresh(EEFSection.java:62)
+	at org.eclipse.eef.properties.ui.api.EEFTabContents$3.run(EEFTabContents.java:162)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.eef.properties.ui.api.EEFTabContents.refresh(EEFTabContents.java:165)
+	at org.eclipse.eef.properties.ui.api.EEFTabbedPropertySheetPage.processSelectionChanged(EEFTabbedPropertySheetPage.java:522)
+	at org.eclipse.eef.properties.ui.api.EEFTabbedPropertySheetPage.access$0(EEFTabbedPropertySheetPage.java:479)
+	at org.eclipse.eef.properties.ui.api.EEFTabbedPropertySheetPage$1.selectionChanged(EEFTabbedPropertySheetPage.java:206)
+	at org.eclipse.eef.properties.ui.internal.page.EEFTabbedPropertyViewer.fireSelectionChanged(EEFTabbedPropertyViewer.java:96)
+	at org.eclipse.eef.properties.ui.internal.page.EEFTabbedPropertyViewer.access$1(EEFTabbedPropertyViewer.java:94)
+	at org.eclipse.eef.properties.ui.internal.page.EEFTabbedPropertyViewer$1.widgetSelected(EEFTabbedPropertyViewer.java:78)
+	at org.eclipse.jface.util.OpenStrategy.fireSelectionEvent(OpenStrategy.java:242)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:400)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4237)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1060)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1084)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1069)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:773)
+	at org.eclipse.eef.properties.ui.internal.page.propertylist.EEFTabbedPropertyList.select(EEFTabbedPropertyList.java:391)
+	at org.eclipse.eef.properties.ui.internal.page.EEFTabbedPropertyViewer.setSelectedTabDescriptor(EEFTabbedPropertyViewer.java:178)
+	at org.eclipse.eef.properties.ui.api.EEFTabbedPropertySheetPage.doSetInput(EEFTabbedPropertySheetPage.java:321)
+	at org.eclipse.eef.properties.ui.api.EEFTabbedPropertySheetPage.setInput(EEFTabbedPropertySheetPage.java:256)
+	at org.eclipse.eef.properties.ui.api.EEFTabbedPropertySheetPage.selectionChanged(EEFTabbedPropertySheetPage.java:239)
+	at org.eclipse.ui.views.properties.PropertySheet.showSelectionAndDescription(PropertySheet.java:554)
+	at org.eclipse.ui.views.properties.PropertySheet.selectionChanged(PropertySheet.java:534)
+	at org.eclipse.ui.internal.e4.compatibility.SelectionService.notifyListeners(SelectionService.java:266)
+	at org.eclipse.ui.internal.e4.compatibility.SelectionService.handlePostSelectionChanged(SelectionService.java:123)
+	at org.eclipse.ui.internal.e4.compatibility.SelectionService.lambda$2(SelectionService.java:78)
+	at org.eclipse.e4.ui.internal.workbench.SelectionAggregator$3.run(SelectionAggregator.java:163)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.SelectionAggregator.notifyPostListeners(SelectionAggregator.java:160)
+	at org.eclipse.e4.ui.internal.workbench.SelectionAggregator$6.lambda$0(SelectionAggregator.java:250)
+	at org.eclipse.e4.core.contexts.RunAndTrack.runExternalCode(RunAndTrack.java:59)
+	at org.eclipse.e4.ui.internal.workbench.SelectionAggregator$6.changed(SelectionAggregator.java:250)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:105)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.processScheduled(EclipseContext.java:364)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.set(EclipseContext.java:379)
+	at org.eclipse.e4.ui.internal.workbench.SelectionServiceImpl.setPostSelection(SelectionServiceImpl.java:39)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.lambda$2(CompatibilityPart.java:132)
+	at org.eclipse.gmf.runtime.diagram.ui.parts.DiagramGraphicalViewer.flushSelectionEvents(DiagramGraphicalViewer.java:257)
+	at org.eclipse.gmf.runtime.diagram.ui.parts.DiagramGraphicalViewer$1.run(DiagramGraphicalViewer.java:235)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4029)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1041)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+Caused by: java.lang.IllegalStateException: Cannot modify resource set without a write transaction
+	at org.eclipse.emf.transaction.impl.TransactionChangeRecorder.assertWriting(TransactionChangeRecorder.java:349)
+	at org.eclipse.emf.transaction.impl.TransactionChangeRecorder.appendNotification(TransactionChangeRecorder.java:303)
+	at org.eclipse.emf.transaction.impl.TransactionChangeRecorder.processObjectNotification(TransactionChangeRecorder.java:285)
+	at org.eclipse.emf.transaction.impl.TransactionChangeRecorder.notifyChanged(TransactionChangeRecorder.java:241)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at party.impl.PartyImpl.setTotalCosts(PartyImpl.java:173)
+	at TestPartyModel.design.Services.calculateTotalCostsOfParty(Services.java:116)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.sirius.common.tools.internal.interpreter.MonomorphicService.call(MonomorphicService.java:77)
+	... 83 more
+
+!ENTRY org.eclipse.eef.core 4 0 2023-02-08 03:09:56.677
+!MESSAGE An issue has occurred during the evaluation of 'aql:self.sustenances->select(s | s.oclIsTypeOf(Food))->size()'.
+Couldn't find the 'Food' variable
+
+
+!ENTRY org.eclipse.eef.core 4 0 2023-02-08 03:13:14.860
+!MESSAGE An issue has occurred during the evaluation of 'aql:self.sustenances->select(s | s.oclIsTypeOf(Food) == true)->size()'.
+Couldn't find the 'Food' variable
+
+
+!ENTRY org.eclipse.eef.core 4 0 2023-02-08 03:13:27.918
+!MESSAGE An issue has occurred during the evaluation of 'aql:self.sustenances->select(s | s.oclIsTypeOf(Food) == true)->size()'.
+Couldn't find the 'Food' variable
+
+
+!ENTRY org.eclipse.eef.core 4 0 2023-02-08 03:17:11.258
+!MESSAGE An issue has occurred during the evaluation of 'aql:self.sustenances->select(s | s.oclIsTypeOf(party::Food) && s.type == party::FoodCategory::PIZZA)->size()'.
+token recognition error at: '&'
+token recognition error at: '&'
+invalid iteration call
+
+
+!ENTRY org.eclipse.ui 4 0 2023-02-08 05:13:33.917
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.IllegalArgumentException: -1
+	at java.base/java.lang.StringUTF16.toBytes(StringUTF16.java:220)
+	at java.base/java.lang.String.<init>(String.java:345)
+	at org.antlr.v4.runtime.UnbufferedCharStream.getText(UnbufferedCharStream.java:341)
+	at org.antlr.v4.runtime.Lexer.notifyListeners(Lexer.java:360)
+	at org.antlr.v4.runtime.Lexer.nextToken(Lexer.java:144)
+	at org.antlr.v4.runtime.UnbufferedTokenStream.fill(UnbufferedTokenStream.java:179)
+	at org.antlr.v4.runtime.UnbufferedTokenStream.sync(UnbufferedTokenStream.java:164)
+	at org.antlr.v4.runtime.UnbufferedTokenStream.consume(UnbufferedTokenStream.java:154)
+	at org.antlr.v4.runtime.Parser.consume(Parser.java:571)
+	at org.antlr.v4.runtime.Parser.match(Parser.java:203)
+	at org.eclipse.acceleo.query.parser.QueryParser.callExp(QueryParser.java:1024)
+	at org.eclipse.acceleo.query.parser.QueryParser.navigationSegment(QueryParser.java:918)
+	at org.eclipse.acceleo.query.parser.QueryParser.expression(QueryParser.java:659)
+	at org.eclipse.acceleo.query.parser.QueryParser.entry(QueryParser.java:154)
+	at org.eclipse.acceleo.query.runtime.impl.QueryBuilderEngine.build(QueryBuilderEngine.java:93)
+	at org.eclipse.acceleo.query.runtime.impl.QueryValidationEngine.validate(QueryValidationEngine.java:54)
+	at org.eclipse.acceleo.query.runtime.impl.QueryCompletionEngine.getCompletion(QueryCompletionEngine.java:72)
+	at org.eclipse.sirius.common.acceleo.aql.ide.proposal.AQLProposalProvider.getProposals(AQLProposalProvider.java:120)
+	at org.eclipse.sirius.common.acceleo.aql.ide.proposal.AQLProposalProvider.getProposals(AQLProposalProvider.java:73)
+	at org.eclipse.sirius.common.tools.api.interpreter.CompoundInterpreter.getProposals(CompoundInterpreter.java:441)
+	at org.eclipse.sirius.ui.tools.api.assist.TextContentProposalProvider.getProposals(TextContentProposalProvider.java:87)
+	at org.eclipse.jface.fieldassist.ContentProposalAdapter.getProposals(ContentProposalAdapter.java:2033)
+	at org.eclipse.jface.fieldassist.ContentProposalAdapter$ContentProposalPopup.recomputeProposals(ContentProposalAdapter.java:949)
+	at org.eclipse.jface.fieldassist.ContentProposalAdapter$ContentProposalPopup.lambda$5(ContentProposalAdapter.java:974)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4029)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1041)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+!ENTRY org.eclipse.ui 4 0 2023-02-08 05:15:42.752
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.IllegalArgumentException: -1
+	at java.base/java.lang.StringUTF16.toBytes(StringUTF16.java:220)
+	at java.base/java.lang.String.<init>(String.java:345)
+	at org.antlr.v4.runtime.UnbufferedCharStream.getText(UnbufferedCharStream.java:341)
+	at org.antlr.v4.runtime.Lexer.notifyListeners(Lexer.java:360)
+	at org.antlr.v4.runtime.Lexer.nextToken(Lexer.java:144)
+	at org.antlr.v4.runtime.UnbufferedTokenStream.fill(UnbufferedTokenStream.java:179)
+	at org.antlr.v4.runtime.UnbufferedTokenStream.sync(UnbufferedTokenStream.java:164)
+	at org.antlr.v4.runtime.UnbufferedTokenStream.consume(UnbufferedTokenStream.java:154)
+	at org.antlr.v4.runtime.atn.ParserATNSimulator.execATN(ParserATNSimulator.java:537)
+	at org.antlr.v4.runtime.atn.ParserATNSimulator.adaptivePredict(ParserATNSimulator.java:393)
+	at org.eclipse.acceleo.query.parser.QueryParser.navigationSegment(QueryParser.java:890)
+	at org.eclipse.acceleo.query.parser.QueryParser.expression(QueryParser.java:659)
+	at org.eclipse.acceleo.query.parser.QueryParser.entry(QueryParser.java:154)
+	at org.eclipse.acceleo.query.runtime.impl.QueryBuilderEngine.build(QueryBuilderEngine.java:93)
+	at org.eclipse.acceleo.query.runtime.impl.QueryValidationEngine.validate(QueryValidationEngine.java:54)
+	at org.eclipse.acceleo.query.runtime.impl.QueryCompletionEngine.getCompletion(QueryCompletionEngine.java:72)
+	at org.eclipse.sirius.common.acceleo.aql.ide.proposal.AQLProposalProvider.getProposals(AQLProposalProvider.java:120)
+	at org.eclipse.sirius.common.acceleo.aql.ide.proposal.AQLProposalProvider.getProposals(AQLProposalProvider.java:73)
+	at org.eclipse.sirius.common.tools.api.interpreter.CompoundInterpreter.getProposals(CompoundInterpreter.java:441)
+	at org.eclipse.sirius.ui.tools.api.assist.TextContentProposalProvider.getProposals(TextContentProposalProvider.java:87)
+	at org.eclipse.jface.fieldassist.ContentProposalAdapter.getProposals(ContentProposalAdapter.java:2033)
+	at org.eclipse.jface.fieldassist.ContentProposalAdapter$ContentProposalPopup.recomputeProposals(ContentProposalAdapter.java:949)
+	at org.eclipse.jface.fieldassist.ContentProposalAdapter$ContentProposalPopup.lambda$5(ContentProposalAdapter.java:974)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4029)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1041)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+!ENTRY org.eclipse.eef.core 4 0 2023-02-08 06:10:08.326
+!MESSAGE An issue has occurred during the evaluation of 'aql:self.sustenanceß:size() != 0'.
+token recognition error at: 'ß'
+Feature sustenance not found in EClass Participant
+
+
+!ENTRY org.eclipse.eef.core 4 0 2023-02-08 06:10:08.328
+!MESSAGE An issue has occurred during the evaluation of 'aql:self.sustenanceß:size() != 0'.
+token recognition error at: 'ß'
+Feature sustenance not found in EClass Participant
+
+
+!ENTRY org.eclipse.eef.core 4 0 2023-02-08 06:11:52.520
+!MESSAGE An issue has occurred during the evaluation of 'aql:self.sustenanceß:size() != 0'.
+token recognition error at: 'ß'
+Feature sustenance not found in EClass Participant
+
+
+!ENTRY org.eclipse.eef.core 4 0 2023-02-08 06:11:52.521
+!MESSAGE An issue has occurred during the evaluation of 'aql:self.sustenanceß:size() != 0'.
+token recognition error at: 'ß'
+Feature sustenance not found in EClass Participant
+
+
+!ENTRY org.eclipse.eef.core 4 0 2023-02-08 06:14:55.937
+!MESSAGE An issue has occurred during the evaluation of 'aql:self.sustenanceß:size() != 0'.
+token recognition error at: 'ß'
+Feature sustenance not found in EClass Participant
+
+
+!ENTRY org.eclipse.eef.core 4 0 2023-02-08 06:14:55.939
+!MESSAGE An issue has occurred during the evaluation of 'aql:self.sustenanceß:size() != 0'.
+token recognition error at: 'ß'
+Feature sustenance not found in EClass Participant
+
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-02-08 06:19:52.334
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.leMsfTTy
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-02-08 06:19:52.335
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.leMsfTTy
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-02-08 06:19:52.337
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-02-08 06:19:52.340
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.leMsfTTy => OK
+
+!ENTRY org.eclipse.ui 2 2 2023-02-08 06:19:52.989
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+!SESSION 2023-02-08 06:20:32.027 -----------------------------------------------
+eclipse.buildId=4.21.0.I20210906-0500
+java.version=16.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data C:\Users\Hristo\Desktop\TU Ilmenau\Master\3 Semester\MDA\PartyModel\Workspaces\Model\Party -dev file:C:/Users/Hristo/Desktop/TU Ilmenau/Master/3 Semester/MDA/PartyModel/Workspaces/Metamodel/.metadata/.plugins/org.eclipse.pde.core/Party_configuration/dev.properties -os win32 -ws win32 -arch x86_64 -consoleLog
+
+!ENTRY org.eclipse.jface 2 0 2023-02-08 06:20:50.365
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-02-08 06:20:50.366
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@17fa25f1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@50ac63b2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-02-08 06:21:25.430
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Hristo'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
